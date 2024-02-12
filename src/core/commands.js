@@ -214,10 +214,9 @@ export function changeIndent(dir = 1) {
 
 			if (changed) {
 				dispatch(tr);
-				return true;
 			}
 		}
-		return false;
+		return true;
 	};
 }
 

@@ -72,7 +72,7 @@ function Editor(props) {
 				.split(/\n/)
 				.reduce((result, word) => result.length ? [...result, <br/>, word] : [word], [])}
 			</Noticebar>}
-			<div className="editor-core" ref={editorRef}>
+			<div className="editor-core" ref={editorRef} tabIndex={1}>
 				<div className="relative-container">
 					{refReady && !props.disableUI && <Fragment>
 						{editorState.link && <LinkPopup parentRef={editorRef} pluginState={editorState.link.popup}/>}
