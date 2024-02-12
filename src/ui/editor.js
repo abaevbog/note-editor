@@ -73,7 +73,7 @@ function Editor(props) {
 				.split(/\n/)
 				.reduce((result, word) => result.length ? [...result, <br/>, word] : [word], [])}
 			</Noticebar>}
-			<div className="editor-core" ref={editorRef}>
+			<div className="editor-core" ref={editorRef} tabIndex={1}>
 				<div className="relative-container">
 					{refReady && !props.disableUI && <Fragment>
 						{['ios', 'web'].includes(props.viewMode) && !editorState.link?.popup.active && editorState.table.isTableSelected() && <TablePopup parentRef={editorRef} tableState={editorState.table} /> }
